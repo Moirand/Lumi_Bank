@@ -35,12 +35,19 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(project(":common"))
+    implementation(project(":feature_auth"))
+    implementation(project(":feature_auth:di"))
+    implementation(project(":feature_dashboard"))
+    implementation(project(":feature_dashboard:di"))
 
-    implementation(libs.koin.bom)
+    implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
