@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".registerScreen.InputPhoneNumberFragment">
+
+    <ImageView
+        android:id="@+id/btn_kembali"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/back_button_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/DisplayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:text="@string/no_hp"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        app:boxBackgroundColor="@color/neutral_02"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:endIconMode="clear_text"
+        app:expandedHintEnabled="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderText="812-3456-7890"
+        app:placeholderTextAppearance="@style/BodyText"
+        app:placeholderTextColor="@color/neutral_03"
+        app:prefixText="+62 "
+        app:prefixTextAppearance="@style/BodyText"
+        app:prefixTextColor="@color/neutral_09">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiedt_phone_number"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/neutral_09" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_lanjut"
+        style="@style/PrimaryActiveButton"
+        android:layout_width="203dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="572dp"
+        android:text="@string/lanjut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

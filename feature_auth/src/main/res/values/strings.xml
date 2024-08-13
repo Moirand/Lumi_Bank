@@ -14,4 +14,8 @@
     <string name="nomor_ktp">Nomor KTP</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="atur_pin">Atur PIN</string>
+    <string name="masukkan_6_digit_pin">Masukkan 6 digit PIN</string>
+    <string name="konfirmasi_pin">Konfirmasi PIN</string>
+    <string name="konfirmasi_6_digit_pin">Konfirmasi 6 digit PIN</string>
 </resources>
