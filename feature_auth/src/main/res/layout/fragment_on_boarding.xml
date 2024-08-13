@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.OnBoardingFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_lumi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="222dp"
+        android:src="@drawable/logo_lumi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_selamat_datang"
+        style="@style/HeadlineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selamat Datang"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintTop_toBottomOf="@+id/img_lumi"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_punya_rekening"
+        style="@style/PrimaryActiveButton"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="128dp"
+        android:text="Sudah Punya Rekening"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selamat_datang"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_belum_punya_rekening"
+        style="@style/SecondaryActiveButton"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Belum Punya Rekening"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_punya_rekening"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

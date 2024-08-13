@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.registerScreen.InputBiodataFragment">
+
+    <TextView
+        android:id="@+id/tv_biodata"
+        style="@style/DisplayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="Biodata"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_nomor_ktp"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nomor KTP"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@+id/tv_biodata"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nomor_ktp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/neutral_02"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:endIconMode="clear_text"
+        app:expandedHintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nomor_ktp"
+        app:placeholderText="123*********0192001"
+        app:placeholderTextAppearance="@style/BodyText"
+        app:placeholderTextColor="@color/neutral_03">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiedt_nomor_ktp"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/neutral_09" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_nama_lengkap"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nama Lengkap"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@id/til_nomor_ktp"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nama_lengkap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/neutral_02"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:endIconMode="clear_text"
+        app:expandedHintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama_lengkap"
+        app:placeholderText="Nur Afina"
+        app:placeholderTextAppearance="@style/BodyText"
+        app:placeholderTextColor="@color/neutral_03">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiedt_nama_lengkap"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/neutral_09" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_tanggal_lahir"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tanggal Lahir"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@id/til_nama_lengkap"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tanggal_lahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/neutral_02"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconMode="custom"
+        app:endIconTint="@color/neutral_03"
+        app:expandedHintEnabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir"
+        app:layout_constraintWidth_percent="0.5"
+        app:placeholderText="dd/mm/yyyy"
+        app:placeholderTextAppearance="@style/BodyText"
+        app:placeholderTextColor="@color/neutral_03">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiedt_tanggal_lahir"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:maxLines="1"
+            android:textColor="@color/neutral_09" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_lanjut"
+        style="@style/PrimaryActiveButton"
+        android:layout_width="203dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="576dp"
+        android:text="@string/lanjut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

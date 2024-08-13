@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.registerScreen.UploadKtpFragment">
+
+    <ImageView
+        android:id="@+id/img_ktp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ektp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_keterangan"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Silahkan upload dan kirim e-KTP anda"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintTop_toBottomOf="@+id/img_ktp"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_unggah_ktp"
+        style="@style/GradientActiveButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:text="Upload e-KTP"
+        app:layout_constraintTop_toBottomOf="@+id/tv_keterangan"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_kirim"
+        style="@style/GradientActiveButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="Kirim"
+        app:layout_constraintTop_toBottomOf="@+id/btn_unggah_ktp"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

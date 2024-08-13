@@ -1,171 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="200dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/btn_num_1"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:textColor="@color/neutral_09"
-        android:layout_marginTop="70dp"
-        style="@style/BodyText"
-        android:textSize="30sp"
+        android:layout_marginHorizontal="32dp"
         android:text="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/neutral_09"
         app:layout_constraintEnd_toStartOf="@id/btn_num_2"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
     <TextView
         android:id="@+id/btn_num_2"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:layout_marginTop="70dp"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
         android:text="2"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toEndOf="@id/btn_num_1"
-        app:layout_constraintEnd_toStartOf="@id/btn_num_3"
-
-        />
     <TextView
         android:id="@+id/btn_num_3"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:layout_marginTop="70dp"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
+        android:layout_marginHorizontal="32dp"
         android:text="3"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/neutral_09"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_num_2"/>
+        app:layout_constraintStart_toEndOf="@id/btn_num_2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/btn_num_4"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:textColor="@color/neutral_09"
-        android:layout_marginVertical="40dp"
-        style="@style/BodyText"
-        android:textSize="30sp"
+        android:layout_margin="32dp"
         android:text="4"
-        app:layout_constraintTop_toBottomOf="@id/btn_num_2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/neutral_09"
         app:layout_constraintEnd_toStartOf="@id/btn_num_5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_num_1"
+        tools:ignore="HardcodedText" />
+
     <TextView
         android:id="@+id/btn_num_5"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:layout_marginVertical="40dp"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
+        android:layout_margin="32dp"
         android:text="5"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_num_2"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toEndOf="@id/btn_num_4"
-        app:layout_constraintEnd_toStartOf="@id/btn_num_6"
+        tools:ignore="HardcodedText" />
 
-        />
     <TextView
         android:id="@+id/btn_num_6"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:layout_marginVertical="40dp"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
+        android:layout_margin="32dp"
         android:text="6"
-        app:layout_constraintTop_toBottomOf="@id/btn_num_2"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:textColor="@color/neutral_09"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_num_5"/>
+        app:layout_constraintStart_toEndOf="@id/btn_num_5"
+        app:layout_constraintTop_toBottomOf="@id/btn_num_3"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/btn_num_7"
-        android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:textColor="@color/neutral_09"
-        android:layout_marginVertical="40dp"
-        style="@style/BodyText"
-        android:textSize="30sp"
-        android:text="7"
-        app:layout_constraintTop_toBottomOf="@id/btn_num_5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_num_8"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        />
-    <TextView
-        android:id="@+id/btn_num_8"
-        android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:layout_marginVertical="40dp"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
-        android:text="8"
-        app:layout_constraintTop_toBottomOf="@id/btn_num_5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toEndOf="@id/btn_num_7"
-        app:layout_constraintEnd_toStartOf="@id/btn_num_9"
-
-        />
-    <TextView
-        android:id="@+id/btn_num_9"
-        android:layout_height="wrap_content"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:layout_marginVertical="40dp"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
-        android:text="9"
-        app:layout_constraintTop_toBottomOf="@id/btn_num_5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_num_8"/>
-    <TextView
-        android:id="@+id/btn_num_0"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="40dp"
-        android:layout_width="50dp"
-        android:textAlignment="center"
-        android:textColor="@color/neutral_09"
-        style="@style/BodyText"
-        android:textSize="30sp"
-        android:text="0"
-        app:layout_constraintTop_toBottomOf="@id/btn_num_8"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="@id/btn_num_8"
-        app:layout_constraintEnd_toStartOf="@id/btn_delete"
-
-        />
-    <ImageView
-        android:id="@+id/btn_delete"
+        style="@style/HeadlineText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="40dp"
+        android:layout_margin="32dp"
+        android:text="7"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintEnd_toStartOf="@id/btn_num_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_num_4"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btn_num_8"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="8"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_num_5"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btn_num_9"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="9"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_num_8"
+        app:layout_constraintTop_toBottomOf="@id/btn_num_6"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btn_num_0"
+        style="@style/HeadlineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="0"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_num_8"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/btn_hapus"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:insetTop="0dp"
         android:src="@drawable/ic_backspace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_num_0"
         app:layout_constraintTop_toBottomOf="@id/btn_num_9"
-        app:layout_constraintEnd_toEndOf="@id/btn_num_9"
-        app:layout_constraintStart_toEndOf="@id/btn_num_0"/>
+        tools:ignore="HardcodedText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

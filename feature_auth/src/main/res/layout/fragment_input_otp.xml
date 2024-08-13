@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.registerScreen.InputOtpFragment">
+
+    <ImageView
+        android:id="@+id/btn_kembali"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/back_button_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_verifikasi"
+        style="@style/DisplayText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="Verifikasi OTP"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_keterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kode OTP telah dikirimkan ke example@gmail.com, masukkan kode tersebut di bawah ini."
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_verifikasi"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/linearlay_input_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_keterangan">
+
+        <EditText
+            android:id="@+id/edt_input_otp_1"
+            style="@style/DisplayText"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edt_input_otp_2"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="labelFor" />
+
+        <EditText
+            android:id="@+id/edt_input_otp_3"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="labelFor" />
+
+        <EditText
+            android:id="@+id/edt_input_otp_4"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="labelFor" />
+
+        <EditText
+            android:id="@+id/edt_input_otp_5"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="labelFor" />
+
+        <EditText
+            android:id="@+id/edt_input_otp_6"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="labelFor" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_timer"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="00:53"
+        android:textColor="@color/neutral_09"
+        app:layout_constraintTop_toBottomOf="@+id/linearlay_input_otp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/btn_kirim_ulang_otp"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Kirim Ulang Kode"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timer"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_lanjut"
+        style="@style/PrimaryActiveButton"
+        android:layout_width="203dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="572dp"
+        android:text="@string/lanjut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
