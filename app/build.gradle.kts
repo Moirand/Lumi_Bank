@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.safeArgs)
-    alias(libs.plugins.ksp)
 }
 
 android {
@@ -42,21 +41,22 @@ android {
 
 dependencies {
     implementation(project(":common"))
+    implementation(project(":domain"))
     implementation(project(":feature_auth"))
-    implementation(project(":feature_auth:di"))
     implementation(project(":feature_dashboard"))
-    implementation(project(":feature_dashboard:di"))
 
+    // Koin
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
+
+    // Navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+    // Generated dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

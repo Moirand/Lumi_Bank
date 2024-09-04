@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.common"
+    namespace = "com.example.data"
     compileSdk = 34
 
     defaultConfig {
@@ -32,4 +32,20 @@ android {
     }
 }
 
-dependencies {}
+dependencies {
+    implementation(project(":domain"))
+
+    // Datastore
+    implementation(libs.androidx.datastore.preferences)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
+    // Interceptor
+    implementation(libs.okhttp.logging.interceptor)
+
+    // Chucker
+    debugImplementation(libs.chucker)
+    releaseImplementation(libs.chucker.no.op)
+}
