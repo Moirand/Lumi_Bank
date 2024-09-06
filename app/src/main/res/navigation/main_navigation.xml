@@ -6,26 +6,14 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.lumibank.splashScreen.SplashFragment"
+        android:name="com.example.lumibank.SplashFragment"
         android:label="SplashFragment">
         <action
             android:id="@+id/action_splashFragment_to_feature_auth_navigation"
             app:destination="@id/feature_auth_navigation"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_splashFragment_to_feature_dashboard_navigation"
-            app:destination="@id/feature_dashboard_navigation"
-            app:popUpTo="@id/splashFragment"
-            app:popUpToInclusive="true" />
     </fragment>
 
     <include app:graph="@navigation/feature_auth_navigation" />
-    <include app:graph="@navigation/feature_dashboard_navigation" />
-
-    <action
-        android:id="@+id/navigate_to_dashboard_navigation"
-        app:destination="@id/feature_dashboard_navigation"
-        app:popUpTo="@id/feature_auth_navigation"
-        app:popUpToInclusive="true" />
 </navigation>
