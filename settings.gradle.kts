@@ -21,6 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lumi Bank"
 include(":app")
+include(":core")
 include(":common")
 include(":di")
 include(":data")

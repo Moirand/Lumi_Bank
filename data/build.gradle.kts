@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
+    implementation(project(":core"))
 
     // Datastore
     implementation(libs.androidx.datastore.preferences)

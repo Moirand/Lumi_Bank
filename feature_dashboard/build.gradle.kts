@@ -37,8 +37,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
     implementation(project(":common"))
-    implementation(project(":domain"))
 
     // Koin
     implementation(platform(libs.koin.bom))
