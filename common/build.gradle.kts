@@ -1,21 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.safeArgs)
 }
 
 android {
-    namespace = "com.example.lumibank"
+    namespace = "com.example.common"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lumibank"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -34,25 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    implementation(project(":di"))
-    implementation(project(":core"))
-    implementation(project(":common"))
-    implementation(project(":feature_auth"))
-
-    // Koin
-    implementation(platform(libs.koin.bom))
-    implementation(libs.koin.android)
-
-    // Navigation
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-
     // Generated dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
