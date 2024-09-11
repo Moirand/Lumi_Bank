@@ -32,4 +32,8 @@ android {
     }
 }
 
-dependencies {}
+dependencies {
+    // Coroutine Flow
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+}

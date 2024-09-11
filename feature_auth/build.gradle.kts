@@ -58,7 +58,7 @@ dependencies {
     implementation(libs.biometric)
 
     // Pin
-    implementation(libs.pin.view)
+//    implementation(libs.pin.view)
 
     // Generated dependencies
     implementation(libs.androidx.core.ktx)

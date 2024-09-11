@@ -17,6 +17,7 @@ jetbrainsKotlinJvm = "1.9.23"
 koin = "3.5.6"
 lifecycleLivedataKtx = "2.8.4"
 lifecycleViewmodelKtx = "2.8.4"
+coroutines = "1.8.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +40,8 @@ androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecy
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 pin-view = { group = "com.github.khaled2252", name = "pin-view", version = "1.0.0" }
 biometric = { group = "androidx.biometric", name = "biometric", version = "1.1.0" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines"}
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines"}
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }

@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.lumibank.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
@@ -31,6 +32,7 @@ class SplashFragment : Fragment() {
             addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
                     super.onAnimationEnd(animation)
+                    findNavController().navigate(R.id.action_splashFragment_to_auth_navigation)
                 }
             })
             start()
