@@ -1,9 +1,11 @@
 package com.example.data
 
+import com.example.core.model.response.BalanceGetResponseCore
 import com.example.core.model.response.LoginDataCore
 import com.example.core.model.response.LoginResponseCore
 import com.example.core.model.response.UserDataCore
 import com.example.core.model.response.UserGetResponseCore
+import com.example.data.datasource.remote.response.BalanceGetResponse
 import com.example.data.datasource.remote.response.LoginData
 import com.example.data.datasource.remote.response.LoginResponse
 import com.example.data.datasource.remote.response.UserData
@@ -41,4 +43,11 @@ private fun UserData.toCore(): UserDataCore =
         name = name ?: "",
         ektpPhoto = ektpPhoto ?: "",
         email = email ?: ""
+    )
+
+fun BalanceGetResponse.toCore(): BalanceGetResponseCore =
+    BalanceGetResponseCore(
+        data = data,
+        success = success,
+        message = message
     )

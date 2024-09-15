@@ -1,4 +1,4 @@
-package com.example.lumibank
+package com.example.lumibank.splashScreen
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -10,16 +10,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.lumibank.R
 import com.example.lumibank.databinding.FragmentSplashBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SplashFragment : Fragment() {
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
 
+    private val viewModel by viewModel<SplashViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         return FragmentSplashBinding.inflate(layoutInflater).also {
             _binding = it
         }.root
@@ -32,7 +36,13 @@ class SplashFragment : Fragment() {
             addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
                     super.onAnimationEnd(animation)
-                    findNavController().navigate(R.id.action_splashFragment_to_auth_navigation)
+                    viewModel.token.observe(viewLifecycleOwner) { token ->
+                        if (token == null) {
+                            findNavController().navigate(R.id.splashFragment_to_authNavigation)
+                        } else {
+                            findNavController().navigate(R.id.splashFragment_to_dashboardNavigation)
+                        }
+                    }
                 }
             })
             start()
@@ -42,9 +52,9 @@ class SplashFragment : Fragment() {
     private fun playMoveScaling(): AnimatorSet {
         val moveAnimate =
             ObjectAnimator.ofFloat(binding.imgSplashSlide, View.TRANSLATION_Y, 2800f, -100f)
-                .setDuration(7000)
+                .setDuration(5000)
         val scalingAnimate =
-            ObjectAnimator.ofFloat(binding.imgSplashSlide, View.SCALE_Y, 0f, 4f).setDuration(7000)
+            ObjectAnimator.ofFloat(binding.imgSplashSlide, View.SCALE_Y, 0f, 4f).setDuration(5000)
 
         return AnimatorSet().apply {
             playTogether(moveAnimate, scalingAnimate)
@@ -53,7 +63,7 @@ class SplashFragment : Fragment() {
 
     private fun playFadeAnimation(): AnimatorSet {
         val fadeAnimate =
-            ObjectAnimator.ofFloat(binding.imgSplashSlide, View.ALPHA, 1f, 0f).setDuration(3000)
+            ObjectAnimator.ofFloat(binding.imgSplashSlide, View.ALPHA, 1f, 0f).setDuration(2000)
         val logoFade = ObjectAnimator.ofFloat(binding.imgLumi, View.ALPHA, 1f, 0f).setDuration(1000)
 
         return AnimatorSet().apply {

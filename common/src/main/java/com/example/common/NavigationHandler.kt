@@ -1,8 +1,8 @@
 package com.example.common
 
 interface NavigationHandler {
-    fun navigateToLogin()
-    fun navigateToHome()
-    fun navigateToMutasi()
-    fun navigateToTransfer()
+    fun navigateToAuthNavigation()
+    fun navigateToDashboardNavigation()
+    fun navigateToMutasiNavigation()
+    fun navigateToTransferNavigation()
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:background="@drawable/bg_lumi_card"
+    android:paddingHorizontal="32dp">
+
+    <TextView
+        android:id="@+id/tv_nama"
+        style="@style/HeadlineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Pengguna"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ToggleButton
+        android:id="@+id/toggle_rekening"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableStart="@drawable/eye_toggle_selector"
+        android:drawablePadding="8dp"
+        android:gravity="center|start"
+        android:textColor="@color/white"
+        android:textOff="*****0000"
+        android:textOn=""
+        app:layout_constraintTop_toBottomOf="@id/tv_nama"
+        tools:ignore="HardcodedText" />
+
+    <ToggleButton
+        android:id="@+id/toggle_saldo"
+        style="@style/HeadlineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableStart="@drawable/eye_toggle_selector"
+        android:drawablePadding="8dp"
+        android:gravity="center|start"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textOff="Rp *********"
+        android:textOn="Rp 0"
+        app:layout_constraintTop_toBottomOf="@id/toggle_rekening"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_transfer"
+        style="@style/PrimaryActiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/primary_blue"
+        android:text="Transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggle_saldo"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_mutasi"
+        style="@style/SecondaryActiveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Mutasi"
+        app:layout_constraintStart_toEndOf="@id/btn_transfer"
+        app:layout_constraintTop_toBottomOf="@id/toggle_saldo"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,6 +44,7 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":common"))
     implementation(project(":feature_auth"))
+    implementation(project(":feature_dashboard"))
 
     // Koin
     implementation(platform(libs.koin.bom))

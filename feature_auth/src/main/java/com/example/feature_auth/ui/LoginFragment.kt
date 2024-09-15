@@ -53,32 +53,34 @@ class LoginFragment : Fragment() {
                     handleLoading(false)
                     makeToast(requireContext(), loginResult.message)
                 }
+
                 is Resource.Success -> {
                     handleLoading(false)
                     lifecycleScope.launch {
                         awaitAll(
                             viewModel.saveToken(loginResult.data?.data?.jwtToken ?: "")
                         )
-                        viewModel.getUser(loginResult.data?.data?.jwtToken ?: "")
+                        viewModel.getRemoteUserData(loginResult.data?.data?.jwtToken ?: "")
                     }
                 }
             }
         }
 
-        viewModel.userGetResult.observe(viewLifecycleOwner) { userGetResult ->
+        viewModel.remoteUserData.observe(viewLifecycleOwner) { userGetResult ->
             when (userGetResult) {
                 is Resource.Loading -> handleLoading(true)
                 is Resource.Error -> {
                     handleLoading(false)
                     makeToast(requireContext(), userGetResult.message)
                 }
+
                 is Resource.Success -> {
                     handleLoading(false)
                     lifecycleScope.launch {
                         awaitAll(
                             viewModel.saveUserData(userGetResult.data?.data)
                         )
-//                        navHandler.navigateToHome()
+                        navHandler.navigateToDashboardNavigation()
                     }
                 }
             }

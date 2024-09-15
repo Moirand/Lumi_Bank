@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.single
 import java.util.Date
 
 class LocalDatasourceImpl(
@@ -35,11 +34,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadToken(): Flow<String?> = flow {
+    override suspend fun loadToken(): Flow<String?> =
         datastore.data.map {
             it[TOKEN_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun deleteToken() {
         datastore.edit {
@@ -65,11 +63,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadUserName(): Flow<String?> = flow {
+    override suspend fun loadUserName(): Flow<String?> =
         datastore.data.map {
             it[USER_NAME_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveUserEmail(userEmail: String) {
         datastore.edit {
@@ -77,11 +74,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadUserEmail(): Flow<String?> = flow {
+    override suspend fun loadUserEmail(): Flow<String?> =
         datastore.data.map {
             it[USER_EMAIL_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveUserPhoneNumber(userPhoneNumber: String) {
         datastore.edit {
@@ -89,11 +85,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadUserPhoneNumber(): Flow<String?> = flow {
+    override suspend fun loadUserPhoneNumber(): Flow<String?> =
         datastore.data.map {
             it[USER_PHONE_NUMBER_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveAccountNumber(accountNumber: String) {
         datastore.edit {
@@ -101,11 +96,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadAccountNumber(): Flow<String?> = flow {
+    override suspend fun loadAccountNumber(): Flow<String?> =
         datastore.data.map {
             it[ACCOUNT_NUMBER_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveAccountPin(accountPin: String) {
         datastore.edit {
@@ -113,11 +107,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadAccountPin(): Flow<String?> = flow {
+    override suspend fun loadAccountPin(): Flow<String?> =
         datastore.data.map {
             it[ACCOUNT_PIN_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveDateOfBirth(dateOfBirth: String) {
         datastore.edit {
@@ -125,11 +118,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadDateOfBirth(): Flow<String?> = flow {
+    override suspend fun loadDateOfBirth(): Flow<String?> =
         datastore.data.map {
             it[DATE_OF_BIRTH_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveKtpNumber(ktpNumber: String) {
         datastore.edit {
@@ -137,11 +129,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadKtpNumber(): Flow<String?> = flow {
+    override suspend fun loadKtpNumber(): Flow<String?> =
         datastore.data.map {
             it[KTP_NUMBER_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun saveKtpPhoto(ktpPhoto: String) {
         datastore.edit {
@@ -149,11 +140,10 @@ class LocalDatasourceImpl(
         }
     }
 
-    override suspend fun loadKtpPhoto(): Flow<String?> = flow {
+    override suspend fun loadKtpPhoto(): Flow<String?> =
         datastore.data.map {
             it[KTP_PHOTO_KEY]
-        }.single()
-    }
+        }
 
     override suspend fun deleteUserData() {
         datastore.edit {

@@ -19,7 +19,7 @@
 
     <style name="SecondaryActiveButton" parent="Button">
         <item name="android:background">@drawable/btn_secondary_active</item>
-        <item name="android:textColor">@color/primary_blue</item>
+        <item name="android:textColor">@color/neutral_02</item>
     </style>
 
     <style name="SecondaryInactiveButton" parent="Button">

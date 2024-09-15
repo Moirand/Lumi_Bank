@@ -26,17 +26,17 @@ class LoginViewModel(
     private val _loginResult = MutableLiveData<Resource<LoginResponseCore>>()
     val loginResult: LiveData<Resource<LoginResponseCore>> = _loginResult
 
-    private val _userGetResult = MutableLiveData<Resource<UserGetResponseCore>>()
-    val userGetResult: LiveData<Resource<UserGetResponseCore>> = _userGetResult
+    private val _remoteUserData = MutableLiveData<Resource<UserGetResponseCore>>()
+    val remoteUserData: LiveData<Resource<UserGetResponseCore>> = _remoteUserData
 
     fun login(email: String, password: String) = viewModelScope.launch {
         loginUseCase.login(LoginRequest(email, password))
             .collect { _loginResult.value = it }
     }
 
-    fun getUser(token: String) = viewModelScope.launch {
-        remoteUserGetUseCase.getUserData("Bearer $token")
-            .collect { _userGetResult.value = it }
+    fun getRemoteUserData(token: String) = viewModelScope.launch {
+        remoteUserGetUseCase.getUserData(token)
+            .collect { _remoteUserData.value = it }
     }
 
     fun saveToken(token: String): Deferred<Unit> = viewModelScope.async {

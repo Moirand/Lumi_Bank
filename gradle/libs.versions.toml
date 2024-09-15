@@ -18,6 +18,8 @@ koin = "3.5.6"
 lifecycleLivedataKtx = "2.8.4"
 lifecycleViewmodelKtx = "2.8.4"
 coroutines = "1.8.1"
+navigationFragmentKtxVersion = "2.8.0"
+navigationUiKtxVersion = "2.8.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +44,8 @@ pin-view = { group = "com.github.khaled2252", name = "pin-view", version = "1.0.
 biometric = { group = "androidx.biometric", name = "biometric", version = "1.1.0" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines"}
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines"}
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtxVersion" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtxVersion" }
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
