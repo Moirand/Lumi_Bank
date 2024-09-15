@@ -33,4 +33,10 @@
         app:popUpTo="@id/auth_navigation"
         app:popUpToInclusive="true" />
 
+    <action
+        android:id="@+id/dashboardNavigation_to_authNavigation"
+        app:destination="@id/auth_navigation"
+        app:popUpTo="@id/dashboard_navigation"
+        app:popUpToInclusive="true" />
+
 </navigation>

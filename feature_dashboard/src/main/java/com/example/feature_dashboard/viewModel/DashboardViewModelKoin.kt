@@ -5,4 +5,5 @@ import org.koin.dsl.module
 
 val dashboardViewModelKoin = module {
     viewModel { HomeViewModel(get(), get(), get()) }
+    viewModel { AccountViewModel(get(), get(), get()) }
 }

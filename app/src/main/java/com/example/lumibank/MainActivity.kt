@@ -35,16 +35,15 @@ class MainActivity : AppCompatActivity(), NavigationHandler {
 
         // Mengatur kemunculan bottom navigasi pada fragment tertentu
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            when (destination.id) {
-                com.example.feature_dashboard.R.id.homeFragment -> {
-                    binding.bottomNav.visibility = View.VISIBLE
-                }
-
-                else -> {
-                    binding.bottomNav.visibility = View.GONE
-                }
+            if (destination.id == com.example.feature_dashboard.R.id.homeFragment
+                || destination.id == com.example.feature_dashboard.R.id.accountFragment
+            ) {
+                binding.bottomNav.visibility = View.VISIBLE
+            } else {
+                binding.bottomNav.visibility = View.GONE
             }
         }
+
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
 
         // Mengatur navigasi bottom navigation
@@ -55,13 +54,18 @@ class MainActivity : AppCompatActivity(), NavigationHandler {
                     true
                 }
 
+                R.id.menu_account -> {
+                    navController.navigate(com.example.feature_dashboard.R.id.accountFragment)
+                    true
+                }
+
                 else -> false
             }
         }
     }
 
     override fun navigateToAuthNavigation() {
-        TODO("Not yet implemented")
+        navController.navigate(R.id.dashboardNavigation_to_authNavigation)
     }
 
     override fun navigateToDashboardNavigation() =
