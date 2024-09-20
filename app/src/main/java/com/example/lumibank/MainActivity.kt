@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationHandler {
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
         getKoin().declare(this as NavigationHandler)
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity(), NavigationHandler {
         navController.navigate(R.id.authNavigation_to_dashboardNavigation)
 
     override fun navigateToMutasiNavigation() {
-        TODO("Not yet implemented")
+        navController.navigate(R.id.dashboardNavigation_to_mutationNavigation)
     }
 
     override fun navigateToTransferNavigation() {

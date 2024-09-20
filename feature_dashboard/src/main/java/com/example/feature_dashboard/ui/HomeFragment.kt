@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.common.NavigationHandler
 import com.example.common.hideAccountNumber
 import com.example.common.hideBalance
 import com.example.common.makeToast
@@ -13,6 +14,7 @@ import com.example.common.toRupiah
 import com.example.core.Resource
 import com.example.feature_dashboard.databinding.FragmentHomeBinding
 import com.example.feature_dashboard.viewModel.HomeViewModel
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 @SuppressLint("SetTextI18n")
@@ -21,6 +23,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel by viewModel<HomeViewModel>()
+    private val navHandler: NavigationHandler by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -68,7 +71,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.lumiCard.btnMutasi.setOnClickListener {
-
+            navHandler.navigateToMutasiNavigation()
         }
     }
 

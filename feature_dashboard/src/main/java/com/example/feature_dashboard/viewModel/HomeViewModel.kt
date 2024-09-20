@@ -15,8 +15,8 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(
     private val balanceGetUseCase: BalanceGetUseCase,
-    private val localUserGetUseCase: LocalUserGetUseCase,
     private val tokenGetUseCase: TokenGetUseCase,
+    private val localUserGetUseCase: LocalUserGetUseCase
 ) : ViewModel() {
     private var _token: String? = null
 

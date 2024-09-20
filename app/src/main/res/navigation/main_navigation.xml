@@ -7,6 +7,7 @@
 
     <include app:graph="@navigation/auth_navigation" />
     <include app:graph="@navigation/dashboard_navigation" />
+    <include app:graph="@navigation/mutation_navigation" />
 
     <fragment
         android:id="@+id/splashFragment"
@@ -38,5 +39,9 @@
         app:destination="@id/auth_navigation"
         app:popUpTo="@id/dashboard_navigation"
         app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/dashboardNavigation_to_mutationNavigation"
+        app:destination="@id/mutation_navigation" />
 
 </navigation>

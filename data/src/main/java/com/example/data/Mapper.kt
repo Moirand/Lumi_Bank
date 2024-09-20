@@ -3,11 +3,15 @@ package com.example.data
 import com.example.core.model.response.BalanceGetResponseCore
 import com.example.core.model.response.LoginDataCore
 import com.example.core.model.response.LoginResponseCore
+import com.example.core.model.response.MutationDataCore
+import com.example.core.model.response.MutationGetResponseCore
 import com.example.core.model.response.UserDataCore
 import com.example.core.model.response.UserGetResponseCore
 import com.example.data.datasource.remote.response.BalanceGetResponse
 import com.example.data.datasource.remote.response.LoginData
 import com.example.data.datasource.remote.response.LoginResponse
+import com.example.data.datasource.remote.response.MutationData
+import com.example.data.datasource.remote.response.MutationGetResponse
 import com.example.data.datasource.remote.response.UserData
 import com.example.data.datasource.remote.response.UserGetResponse
 
@@ -50,4 +54,26 @@ fun BalanceGetResponse.toCore(): BalanceGetResponseCore =
         data = data,
         success = success,
         message = message
+    )
+
+fun MutationGetResponse.toCore(): MutationGetResponseCore =
+    MutationGetResponseCore(
+        data = data?.map { it.toCore() },
+        success = success,
+        message = message
+    )
+
+private fun MutationData.toCore(): MutationDataCore =
+    MutationDataCore(
+        usernameFrom = usernameFrom ?: "",
+        amount = amount ?: 0.0,
+        datetime = datetime ?: "",
+        accountTo = accountTo ?: "",
+        balance = balance ?: 0.0,
+        usernameTo = usernameTo ?: "",
+        description = description ?: "",
+        id = id ?: "",
+        accountFrom = accountFrom ?: "",
+        type = type ?: "",
+        status = status ?: ""
     )

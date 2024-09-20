@@ -5,6 +5,7 @@ import com.example.core.datasource.RemoteDatasource
 import com.example.core.model.request.LoginRequest
 import com.example.core.model.response.BalanceGetResponseCore
 import com.example.core.model.response.LoginResponseCore
+import com.example.core.model.response.MutationGetResponseCore
 import com.example.core.model.response.UserGetResponseCore
 import com.example.data.datasource.remote.network.ApiService
 import com.example.data.datasource.remote.response.LoginErrorResponse
@@ -46,6 +47,33 @@ class RemoteDatasourceImpl(
         flow {
             emit(Resource.Loading())
             val response = apiService.getBalance("Bearer $token", accountNumber).toCore()
+            emit(Resource.Success(response))
+        }.catch { e ->
+            emit(Resource.Error(e.message ?: "An unknown error occurred"))
+        }
+
+    override suspend fun getAllMutations(
+        token: String,
+        accountNumber: String
+    ): Flow<Resource<MutationGetResponseCore>> =
+        flow {
+            emit(Resource.Loading())
+            val response = apiService.getAllMutations("Bearer $token", accountNumber).toCore()
+            emit(Resource.Success(response))
+        }.catch { e ->
+            emit(Resource.Error(e.message ?: "An unknown error occurred"))
+        }
+
+    override suspend fun getMutationsByDate(
+        token: String,
+        accountNumber: String,
+        startDate: String,
+        endDate: String,
+        type: String
+    ): Flow<Resource<MutationGetResponseCore>> =
+        flow {
+            emit(Resource.Loading())
+            val response = apiService.getMutationsByDate("Bearer $token", accountNumber, startDate, endDate, type).toCore()
             emit(Resource.Success(response))
         }.catch { e ->
             emit(Resource.Error(e.message ?: "An unknown error occurred"))
