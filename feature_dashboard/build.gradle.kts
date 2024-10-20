@@ -40,6 +40,9 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":common"))
 
+    // QR Code Scanner
+    implementation(libs.code.scanner)
+
     // Koin
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)

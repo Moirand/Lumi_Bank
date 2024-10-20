@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/qrisFragment"
+        android:name="com.example.feature_dashboard.ui.qrisScreen.QrCodeScanFragment"
+        android:label="fragment_qris"
+        tools:layout="@layout/fragment_qr_code_scan" />
+
+    <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.feature_dashboard.ui.AccountFragment"
         android:label="fragment_account"
