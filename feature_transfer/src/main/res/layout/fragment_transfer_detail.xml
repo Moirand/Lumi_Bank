@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.TransferDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_tutup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_close" />
+
+        <ImageView
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_lumi" />
+
+        <TextView
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transfer Berhasil"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_tanggal_waktu"
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Senin, 1 Januari 2020 - 00:00:00 UTC"
+            android:textColor="@color/neutral_03"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_nomor_transfer"
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Ref. 0000000000"
+            android:textColor="@color/neutral_03"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Nama Penerima"
+            android:textColor="@color/neutral_03"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_nama_penerima"
+            style="@style/DisplayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penerima"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_bank_rekening_penerima"
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lumi Bank - 000000000000"
+            android:textColor="@color/neutral_09"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.internal.BaselineLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/neutral_09" />
+
+        <TextView
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Detail Transaksi"
+            android:textColor="@color/neutral_03"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Metode Transfer"
+                android:textColor="@color/neutral_09"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Sesama Bank"
+                android:textColor="@color/neutral_09"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <com.google.android.material.internal.BaselineLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/neutral_09" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total Transaksi"
+                android:textColor="@color/neutral_09"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                style="@style/BodyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Rp 1.000"
+                android:textColor="@color/neutral_09"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <com.google.android.material.internal.BaselineLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/neutral_09" />
+
+        <TextView
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Rekening Pengirim"
+            android:textColor="@color/neutral_03"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_nama_pengirim"
+            style="@style/DisplayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pengirim"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_bank_rekening_pengirim"
+            style="@style/CaptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lumi Bank - 000000000000"
+            android:textColor="@color/neutral_09"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

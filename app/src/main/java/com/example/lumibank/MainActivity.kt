@@ -54,6 +54,11 @@ class MainActivity : AppCompatActivity(), NavigationHandler {
                     true
                 }
 
+                R.id.menu_qris -> {
+                    navController.navigate(com.example.feature_dashboard.R.id.qrisFragment)
+                    true
+                }
+
                 R.id.menu_account -> {
                     navController.navigate(com.example.feature_dashboard.R.id.accountFragment)
                     true
@@ -64,18 +69,15 @@ class MainActivity : AppCompatActivity(), NavigationHandler {
         }
     }
 
-    override fun navigateToAuthNavigation() {
+    override fun navigateToAuthNavigation() =
         navController.navigate(R.id.dashboardNavigation_to_authNavigation)
-    }
 
     override fun navigateToDashboardNavigation() =
         navController.navigate(R.id.authNavigation_to_dashboardNavigation)
 
-    override fun navigateToMutasiNavigation() {
+    override fun navigateToMutasiNavigation() =
         navController.navigate(R.id.dashboardNavigation_to_mutationNavigation)
-    }
 
-    override fun navigateToTransferNavigation() {
-        TODO("Not yet implemented")
-    }
+    override fun navigateToTransferNavigation() =
+        navController.navigate(R.id.dashboardNavigation_to_transferNavigation)
 }

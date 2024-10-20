@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/btn_tutup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            style="@style/HeadlineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Cek Detail Penerima"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/circular_background" />
+
+        <TextView
+            android:id="@+id/tv_nama_penerima"
+            style="@style/HeadlineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Penerima"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_bank_rekening_penerima"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Lumi Bank - 000000000000"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lanjut"
+            style="@style/PrimaryActiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/lanjut" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_simpan_penerima"
+            style="@style/SecondaryActiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Simpan Penerima"
+            android:textColor="@color/primary_blue"
+            app:strokeColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

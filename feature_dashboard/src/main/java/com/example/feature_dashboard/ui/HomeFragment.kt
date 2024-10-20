@@ -28,11 +28,9 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return FragmentHomeBinding.inflate(layoutInflater).also {
-            _binding = it
-        }.root
-    }
+    ): View = FragmentHomeBinding.inflate(layoutInflater).also {
+        _binding = it
+    }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -67,7 +65,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.lumiCard.btnTransfer.setOnClickListener {
-
+            navHandler.navigateToTransferNavigation()
         }
 
         binding.lumiCard.btnMutasi.setOnClickListener {

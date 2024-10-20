@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/tv_pin_input1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/pin_bullet" />
+
+    <View
+        android:id="@+id/tv_pin_input2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/pin_bullet" />
+
+    <View
+        android:id="@+id/tv_pin_input3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/pin_bullet" />
+
+    <View
+        android:id="@+id/tv_pin_input4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/pin_bullet" />
+
+    <View
+        android:id="@+id/tv_pin_input5"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/pin_bullet" />
+
+    <View
+        android:id="@+id/tv_pin_input6"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/pin_bullet" />
+
+</LinearLayout>

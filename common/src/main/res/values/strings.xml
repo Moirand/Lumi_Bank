@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="lanjut">Lanjut</string>
+
+    <string-array name="bank_list">
+        <item>BCA</item>
+        <item>BRI</item>
+        <item>BNI</item>
+        <item>Mandiri</item>
+        <item>Lumi</item>
+    </string-array>
+
 </resources>

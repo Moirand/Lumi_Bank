@@ -8,13 +8,13 @@
     <include app:graph="@navigation/auth_navigation" />
     <include app:graph="@navigation/dashboard_navigation" />
     <include app:graph="@navigation/mutation_navigation" />
+    <include app:graph="@navigation/transfer_navigation" />
 
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.lumibank.splashScreen.SplashFragment"
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
-
         <action
             android:id="@+id/splashFragment_to_authNavigation"
             app:destination="@id/auth_navigation"
@@ -42,6 +42,10 @@
 
     <action
         android:id="@+id/dashboardNavigation_to_mutationNavigation"
-        app:destination="@id/mutation_navigation" />
+        app:destination="@id/mutation_navigation"/>
+
+    <action
+        android:id="@+id/dashboardNavigation_to_transferNavigation"
+        app:destination="@id/transfer_navigation"/>
 
 </navigation>

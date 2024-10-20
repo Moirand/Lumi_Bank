@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_section"
+        style="@style/CaptionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/neutral_02"
+        android:paddingVertical="8dp"
+        android:paddingStart="24dp"
+        android:text="A"
+        android:textColor="@color/primary_blue"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        tools:itemCount="2"
+        tools:listitem="@layout/rv_item_saved_account" />
+
+</LinearLayout>

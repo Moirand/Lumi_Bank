@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.TransferInputFragment">
+
+    <ImageButton
+        android:id="@+id/btn_kembali"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_button_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/circular_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nama_penerima"
+            style="@style/HeadlineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Penerima"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_bank_rekening_penerima"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Lumi Bank - 000000000000"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_nominal"
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Nominal"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:expandedHintEnabled="false"
+            app:placeholderText="0"
+            app:placeholderTextAppearance="@style/BodyText"
+            app:prefixText="Rp"
+            app:prefixTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiedt_nominal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Rekening Pengirim"
+            android:textColor="@color/neutral_03"
+            tools:ignore="HardcodedText" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/neutral_02"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:layout_constraintWidth_percent="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nama_pengirim"
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pengirim"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_rekening_pengirim"
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00000000000"
+                    tools:ignore="HardcodedText" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_saldo_pengirim"
+                    style="@style/HeadlineText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 10.000"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Deskripsi"
+            android:textColor="@color/primary_blue"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:placeholderText="0"
+            app:placeholderTextAppearance="@style/BodyText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiedt_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lanjut"
+            style="@style/PrimaryActiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Lanjut"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

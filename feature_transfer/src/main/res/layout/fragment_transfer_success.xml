@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    tools:context=".ui.TransferSuccessFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:src="@drawable/ic_success" />
+
+        <TextView
+            style="@style/BodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Transfer Berhasil"
+            android:textColor="@color/neutral_09"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="32dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/circular_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nama_penerima"
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Penerima"
+                    android:textColor="@color/neutral_09"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_bank_rekening_penerima"
+                    style="@style/CaptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lumi Bank - 000000000000"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_nominal"
+            style="@style/HeadlineText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CaptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal"
+                    android:textColor="@color/neutral_03"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_tanggal"
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Senin, 1 Januari 2020"
+                    android:textColor="@color/neutral_09"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CaptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Waktu"
+                    android:textColor="@color/neutral_03"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_waktu"
+                    style="@style/BodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="00:00:00 UTC"
+                    android:textColor="@color/neutral_09"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_bagikan"
+                style="@style/SecondaryActiveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bagikan"
+                android:textColor="@color/primary_blue"
+                app:icon="@drawable/ic_share"
+                app:iconGravity="textStart"
+                app:iconTint="@color/primary_blue"
+                tools:ignore="HardcodedText" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_detail"
+                style="@style/SecondaryActiveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lihat Detail"
+                android:textColor="@color/primary_blue"
+                app:icon="@drawable/ic_receipt"
+                app:iconGravity="textStart"
+                app:iconTint="@color/primary_blue"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_selesai"
+        style="@style/PrimaryActiveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Selesai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
