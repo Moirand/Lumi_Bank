@@ -2,9 +2,9 @@ package com.example.data.datasource.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class UserGetResponse(
+data class RegisterResponse(
     @field:SerializedName("data")
-    val data: UserData,
+    val data: RegisterData,
 
     @field:SerializedName("message")
     val message: String,
@@ -13,7 +13,7 @@ data class UserGetResponse(
     val success: Boolean
 )
 
-data class UserData(
+data class RegisterData(
     @field:SerializedName("name")
     val name: String? = null,
 
@@ -36,5 +36,5 @@ data class UserData(
     val noKtp: String? = null,
 
     @field:SerializedName("ektp_photo")
-    val ektpPhoto: String? = null,
+    val ektpPhoto: String? = null
 )

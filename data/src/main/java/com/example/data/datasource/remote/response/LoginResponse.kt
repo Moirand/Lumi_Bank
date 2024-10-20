@@ -14,11 +14,11 @@ data class LoginResponse(
 )
 
 data class LoginData(
-    @field:SerializedName("email")
-    val email: String? = null,
-
     @field:SerializedName("name")
     val name: String? = null,
+
+    @field:SerializedName("email")
+    val email: String? = null,
 
     @field:SerializedName("jwt_token")
     val jwtToken: String? = null,
