@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.core.model.response.MutationDataCore
 import com.example.feature_mutasi.R
 
-class MutationPerDateAdapter(
+class DateItemListAdapter(
     private val groupedMutationList: Map<String, List<MutationDataCore>>,
     private val accountNumber: String
-) : RecyclerView.Adapter<MutationPerDateAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<DateItemListAdapter.ViewHolder>() {
     private val dates = groupedMutationList.keys.toList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.rv_item_per_date, parent, false)
+                .inflate(R.layout.rv_item_date, parent, false)
         )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -34,9 +34,11 @@ class MutationPerDateAdapter(
 
         fun bind(date: String, mutations: List<MutationDataCore>) {
             tvTanggal.text = date
-            val transferAdapter = TransactionItemListAdapter(mutations, accountNumber)
-            rvTransaksi.adapter = transferAdapter
-            rvTransaksi.layoutManager = LinearLayoutManager(rvTransaksi.context)
+
+            with(rvTransaksi){
+                adapter = TransactionItemListAdapter(mutations, accountNumber)
+                layoutManager = LinearLayoutManager(rvTransaksi.context)
+            }
         }
     }
 }

@@ -6,10 +6,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.Resource
 import com.example.core.model.response.MutationDataCore
-import com.example.core.model.response.MutationGetResponseCore
+import com.example.core.model.response.MutationsGetResponseCore
 import com.example.core.usecase.LocalUserGetUseCase
 import com.example.core.usecase.MutationGetUseCase
 import com.example.core.usecase.TokenGetUseCase
+import kotlinx.coroutines.flow.zip
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -21,22 +22,22 @@ class MutationViewmodel(
 ) : ViewModel() {
     var accountNumbers: String? = null
 
-    private val _mutationData = MutableLiveData<Resource<MutationGetResponseCore>>()
-    val mutationData: LiveData<Resource<MutationGetResponseCore>> = _mutationData
+    private val _mutationData = MutableLiveData<Resource<MutationsGetResponseCore>>()
+    val mutationData: LiveData<Resource<MutationsGetResponseCore>> = _mutationData
 
     fun getMutations(
         startDate: String? = null,
         endDate: String? = null,
         type: String? = "transfer"
     ) = viewModelScope.launch {
-        localUserGetUseCase.loadAccountNumber().collect { accountNumber ->
-            accountNumbers = accountNumber
-            tokenGetUseCase.getToken().collect { tokenValue ->
+        tokenGetUseCase.getToken()
+            .zip(localUserGetUseCase.loadAccountNumber()) { token, accountNumber ->
+                accountNumbers = accountNumber
                 if (startDate == null && endDate == null) {
-                    mutationUseCase.getAllMutations(tokenValue!!, accountNumber!!)
+                    mutationUseCase.getAllMutations(token!!, accountNumber!!)
                 } else {
                     mutationUseCase.getMutationsByDate(
-                        token = tokenValue!!,
+                        token = token!!,
                         accountNumber = accountNumber!!,
                         startDate = startDate!!,
                         endDate = endDate!!,
@@ -46,7 +47,6 @@ class MutationViewmodel(
                     _mutationData.value = it
                 }
             }
-        }
     }
 
     fun filterMutationByType(

@@ -2,6 +2,7 @@ package com.example.feature_mutasi.ui.mutasiScreen
 
 import android.icu.text.SimpleDateFormat
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,17 +33,13 @@ class MutationFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return FragmentMutasiBinding.inflate(layoutInflater).also {
-            _binding = it
-        }.root
-    }
+    ): View = FragmentMutasiBinding.inflate(layoutInflater).also {
+        _binding = it
+    }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnBack.setOnClickListener {
-            findNavController().popBackStack()
-        }
+        binding.btnKembali.setOnClickListener { findNavController().popBackStack() }
 
         binding.tilTanggalAwal.setEndIconOnClickListener {
             showDateEndPickerDialog { selectedStartDate ->
@@ -66,10 +63,14 @@ class MutationFragment : Fragment() {
             }
         }
 
-        val transaksi = listOf("Semua", "Uang Masuk", "Uang Keluar")
+        val transactionTypeList = listOf("Semua", "Uang Masuk", "Uang Keluar")
         val spinnerAdapter =
-            ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, transaksi)
-        binding.spinner.apply {
+            ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_spinner_item,
+                transactionTypeList
+            )
+        with(binding.spinner) {
             adapter = spinnerAdapter
             onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(
@@ -110,7 +111,7 @@ class MutationFragment : Fragment() {
                             )
                         val groupedMutations = viewModel.groupMutationsByDate(filteredMutation)
                         with(binding.rvMutasi) {
-                            adapter = MutationPerDateAdapter(
+                            adapter = DateItemListAdapter(
                                 groupedMutations,
                                 viewModel.accountNumbers!!
                             )

@@ -1,7 +1,9 @@
 package com.example.domain.usecase
 
 import com.example.core.Resource
+import com.example.core.model.response.MutationDataCore
 import com.example.core.model.response.MutationGetResponseCore
+import com.example.core.model.response.MutationsGetResponseCore
 import com.example.core.repository.MutationRepository
 import com.example.core.usecase.MutationGetUseCase
 import kotlinx.coroutines.flow.Flow
@@ -12,7 +14,7 @@ class MutationGetUseCaseImpl(
     override suspend fun getAllMutations(
         token: String,
         accountNumber: String
-    ): Flow<Resource<MutationGetResponseCore>> {
+    ): Flow<Resource<MutationsGetResponseCore>> {
         return mutationRepository.getAllMutations(token, accountNumber)
     }
 
@@ -22,6 +24,12 @@ class MutationGetUseCaseImpl(
         startDate: String,
         endDate: String,
         type: String
-    ): Flow<Resource<MutationGetResponseCore>> =
+    ): Flow<Resource<MutationsGetResponseCore>> =
         mutationRepository.getMutationsByDate(token, accountNumber, startDate, endDate, type)
+
+    override suspend fun getMutationById(
+        token: String,
+        id: String
+    ): Flow<Resource<MutationGetResponseCore>> =
+        mutationRepository.getMutationById(token, id)
 }

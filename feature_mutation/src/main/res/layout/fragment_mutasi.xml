@@ -7,13 +7,13 @@
     android:background="@color/white"
     tools:context=".ui.mutasiScreen.MutationFragment">
 
-    <ImageView
-        android:id="@+id/btn_back"
+    <ImageButton
+        android:id="@+id/btn_kembali"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/back_button_blue"
+        android:background="@drawable/back_button_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +36,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_back"
+            app:layout_constraintTop_toBottomOf="@id/btn_kembali"
             tools:ignore="HardcodedText" />
 
         <com.google.android.material.internal.BaselineLayout
@@ -192,7 +192,7 @@
             android:layout_marginTop="8dp"
             tools:ignore="HardcodedText"
             tools:itemCount="6"
-            tools:listitem="@layout/rv_item_per_date" />
+            tools:listitem="@layout/rv_item_date" />
 
     </LinearLayout>
 

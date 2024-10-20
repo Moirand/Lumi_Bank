@@ -1,7 +1,13 @@
 package com.example.core.model.response
 
-data class MutationGetResponseCore(
+data class MutationsGetResponseCore(
     val data: List<MutationDataCore>?,
+    val success: Boolean,
+    val message: String
+)
+
+data class MutationGetResponseCore(
+    val data: MutationDataCore?,
     val success: Boolean,
     val message: String
 )
